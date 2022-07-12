@@ -7,4 +7,8 @@ const getLargest = (a, b, c) => {
 
 // console.log(getLargest(4, 6, 8));
 
+
+const getSmallest = (a, b, c) => {
+    return Math.min(a, b, c);
+}
 module.exports = getLargest;
