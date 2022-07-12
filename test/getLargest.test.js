@@ -14,7 +14,7 @@ describe("getLargest", () => {
             [[1, 2, 3], 3],
             [[9, 8, 7], 9],
             [[12, 26, 19], 26]
-        ]).test("", (arr, expected) => {
+        ]).test("%s -> %s", (arr, expected) => {
             expect(getLargest(...arr)).toEqual(expected);
         })
        
