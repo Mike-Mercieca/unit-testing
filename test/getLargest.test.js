@@ -1,3 +1,4 @@
+const each =require('jest-each');
 const getLargest = require("../getLargest");
 
 
@@ -7,9 +8,15 @@ describe("getLargest", () => {
         expect(typeof getLargest).toBe("function");
     })
     
-    test("getLargest returns the largest value", () => {
-        const result = getLargest(1, 2, 3);
-    
-        expect(result).toEqual(3);
+    describe("It handles normal inputs successfully", () => {
+
+        each([
+            [[1, 2, 3], 3],
+            [[9, 8, 7], 9],
+            [[12, 26, 19], 26]
+        ]).test("", (arr, expected) => {
+            expect(getLargest(arr).toEqual(expected));
+        })
+       
     })
 });
