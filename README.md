@@ -8,4 +8,6 @@ This repsitory contains example code for unit testing with Javascript.
 
 ## Development
 
+All testing in this project is done using [jest] https://jestjs.io/
+
 - Run test with `npm run test`
